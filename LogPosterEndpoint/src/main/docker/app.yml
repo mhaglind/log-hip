@@ -1,0 +1,21 @@
+version: '2'
+services:
+    logposterendpoint-app:
+        image: logposterendpoint
+        external_links:
+            - logposterendpoint-postgresql:postgresql
+            - logposterendpoint-elasticsearch:elasticsearch
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/LogPosterEndpoint
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=elasticsearch:9300
+        ports:
+            - 8080:8080
+    logposterendpoint-postgresql:
+        extends:
+            file: postgresql.yml
+            service: logposterendpoint-postgresql
+    logposterendpoint-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: logposterendpoint-elasticsearch

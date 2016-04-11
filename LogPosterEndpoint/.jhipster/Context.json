@@ -1,0 +1,23 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "contextType",
+      "fieldType": "ContextType",
+      "fieldValues": "GEO_TRACE,EVENT_FLOW"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "text",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20160411114520",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "no"
+}

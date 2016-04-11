@@ -1,0 +1,27 @@
+{
+    "logPosterEndpointApp": {
+        "log" : {
+            "home": {
+                "title": "Logs",
+                "createLabel": "Create a new Log",
+                "createOrEditLabel": "Create or edit a Log",
+                "search": "Search for Log"
+            },
+            "created": "A new Log is created with identifier {{ param }}",
+            "updated": "A Log is updated with identifier {{ param }}",
+            "deleted": "A Log is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Log {{ id }}?"
+            },
+            "detail": {
+                "title": "Log"
+            },
+            "createdTime": "CreatedTime",
+            "text": "Text",
+            "predecessor": "Predecessor",
+            "successor": "Successor",
+            "context": "Context",
+            "flow": "Flow"
+        }
+    }
+}

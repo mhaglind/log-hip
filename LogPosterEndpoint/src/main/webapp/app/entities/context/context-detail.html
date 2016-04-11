@@ -1,0 +1,23 @@
+
+<div>
+    <h2><span translate="logPosterEndpointApp.context.detail.title">Context</span> {{vm.context.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="logPosterEndpointApp.context.contextType">ContextType</dt></dt>
+        <dd>
+            <span translate="{{'logPosterEndpointApp.ContextType.' + vm.context.contextType}}">{{vm.context.contextType}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="logPosterEndpointApp.context.text">Text</dt></dt>
+        <dd>
+            <span>{{vm.context.text}}<span>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

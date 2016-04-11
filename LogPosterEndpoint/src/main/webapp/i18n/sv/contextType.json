@@ -1,0 +1,9 @@
+{
+    "logPosterEndpointApp": {
+        "ContextType" : {
+            "null": "",
+            "GEO_TRACE": "GEO_TRACE",
+            "EVENT_FLOW": "EVENT_FLOW"
+        }
+    }
+}

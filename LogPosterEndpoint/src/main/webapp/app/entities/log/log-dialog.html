@@ -1,0 +1,72 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myLogLabel" translate="logPosterEndpointApp.log.home.createOrEditLabel">Create or edit a Log</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.log.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="logPosterEndpointApp.log.createdTime" for="field_createdTime">CreatedTime</label>
+                <div class="input-group">
+                    <input id="field_createdTime" type="text" class="form-control" name="createdTime" datetime-picker="{{dateformat}}" ng-model="vm.log.createdTime" is-open="vm.datePickerOpenStatus.createdTime"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="logPosterEndpointApp.log.text" for="field_text">Text</label>
+            <input type="text" class="form-control" name="text" id="field_text"
+                    ng-model="vm.log.text"
+                    required />
+            <div ng-show="editForm.text.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.text.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="logPosterEndpointApp.log.predecessor" for="field_predecessor">predecessor</label>
+            <select class="form-control" id="field_predecessor" name="predecessor" ng-model="vm.log.predecessorId" ng-options="log.id as log.id for log in vm.predecessors | orderBy:'id'">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="logPosterEndpointApp.log.successor" for="field_successor">successor</label>
+            <select class="form-control" id="field_successor" name="successor" ng-model="vm.log.successorId" ng-options="log.id as log.id for log in vm.successors | orderBy:'id'">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="logPosterEndpointApp.log.context" for="field_context">context</label>
+            <select class="form-control" id="field_context" name="context" ng-model="vm.log.contextId" ng-options="context.id as context.id for context in vm.contexts">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="logPosterEndpointApp.log.flow" for="field_flow">flow</label>
+            <select class="form-control" id="field_flow" name="flow" ng-model="vm.log.flowId" ng-options="flow.id as flow.id for flow in vm.flows">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

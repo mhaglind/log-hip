@@ -1,0 +1,40 @@
+
+entity Log {
+	createdTime ZonedDateTime,
+	text String required,
+}
+
+entity Context {
+	contextType ContextType,
+    text String required
+}
+
+enum ContextType {
+    GEO_TRACE, EVENT_FLOW
+}
+
+entity Flow {
+	text String required
+}
+
+relationship OneToOne {
+	Log{predecessor} to Log
+
+}
+relationship OneToOne {
+    Log{successor} to Log
+}
+relationship ManyToOne {
+	Log{context} to Context
+}
+
+relationship ManyToOne {
+	Log{flow} to Flow
+}
+
+paginate Context, Flow with infinite-scroll
+paginate Log with pagination
+
+dto Log with mapstruct
+
+service Log with serviceClass

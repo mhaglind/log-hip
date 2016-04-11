@@ -1,0 +1,22 @@
+{
+    "logPosterEndpointApp": {
+        "flow" : {
+            "home": {
+                "title": "Flows",
+                "createLabel": "Skapa en ny Flow",
+                "createOrEditLabel": "Skapa eller ändra en Flow",
+                "search": "Sök efter Flow"
+            },
+            "created": "En ny Flow är skapad med id {{ param }}",
+            "updated": "En Flow är uppdaterad med id  {{ param }}",
+            "deleted": "En Flow är borttagen med id  {{ param }}",
+            "delete": {
+                "question": "Är du säker på att du vill ta bort Flow {{ id }}?"
+            },
+            "detail": {
+                "title": "Flow"
+            },
+            "text": "Text"
+        }
+    }
+}

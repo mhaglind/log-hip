@@ -1,0 +1,23 @@
+{
+    "logPosterEndpointApp": {
+        "context" : {
+            "home": {
+                "title": "Contexts",
+                "createLabel": "Skapa en ny Context",
+                "createOrEditLabel": "Skapa eller ändra en Context",
+                "search": "Sök efter Context"
+            },
+            "created": "En ny Context är skapad med id {{ param }}",
+            "updated": "En Context är uppdaterad med id  {{ param }}",
+            "deleted": "En Context är borttagen med id  {{ param }}",
+            "delete": {
+                "question": "Är du säker på att du vill ta bort Context {{ id }}?"
+            },
+            "detail": {
+                "title": "Context"
+            },
+            "contextType": "ContextType",
+            "text": "Text"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+version: '2'
+services:
+    logposterendpoint-postgresql:
+        container_name: logposterendpoint-postgresql
+        image: postgres:9.5.1
+        # volumes:
+        #     - ~/volumes/jhipster/LogPosterEndpoint/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=LogPosterEndpoint
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

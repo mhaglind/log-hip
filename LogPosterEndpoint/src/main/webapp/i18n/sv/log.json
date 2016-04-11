@@ -1,0 +1,27 @@
+{
+    "logPosterEndpointApp": {
+        "log" : {
+            "home": {
+                "title": "Logs",
+                "createLabel": "Skapa en ny Log",
+                "createOrEditLabel": "Skapa eller ändra en Log",
+                "search": "Sök efter Log"
+            },
+            "created": "En ny Log är skapad med id {{ param }}",
+            "updated": "En Log är uppdaterad med id  {{ param }}",
+            "deleted": "En Log är borttagen med id  {{ param }}",
+            "delete": {
+                "question": "Är du säker på att du vill ta bort Log {{ id }}?"
+            },
+            "detail": {
+                "title": "Log"
+            },
+            "createdTime": "CreatedTime",
+            "text": "Text",
+            "predecessor": "Predecessor",
+            "successor": "Successor",
+            "context": "Context",
+            "flow": "Flow"
+        }
+    }
+}
